@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="202.197.9.252" id="8eccb88b-6142-491f-959b-5509d63553b8" port="2222" customName="chendingyao" nameFormat="CUSTOM" username="chendinyao" useOpenSSHConfig="true">
+        <option name="customName" value="chendingyao" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" host="100.65.39.51" id="712e29f9-894d-4356-839e-9a803a500cde" port="22" customName="hpcl" nameFormat="CUSTOM" username="touchnow" useOpenSSHConfig="true">
+        <option name="customName" value="hpcl" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

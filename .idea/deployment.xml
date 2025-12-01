@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="hpcl" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false" autoUploadExternalChanges="true" showAutoUploadSettingsWarning="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="704">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/OFAKD-main" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="737">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/OFAKD-main" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="739">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/OFAKD-main" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="751">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/OFAKD-main" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="775">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/OFAKD-main" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="785">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/OFAKD-main" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="hpcl">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/touchnow/Documents/todesk/OFAKD-main" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tengxiao">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/vol/home/tengxiao/chendingyao/code/OFAKD-main" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
