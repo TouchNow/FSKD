@@ -1,0 +1,4 @@
+[tool.black]
+line-length = 120
+preview = true  # 启用预览特性，可能会有更宽松的格式化规则
+skip-string-normalization = true 

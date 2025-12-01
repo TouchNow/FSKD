@@ -1,0 +1,14 @@
+epochs: 100  #100
+batch_size: 64
+lr: 0.1
+min_lr: 1e-6
+opt: sgd
+weight_decay: 1e-4
+sched: step
+decay_epochs: 30  #30
+warmup_epochs: 3
+color_jitter: 0
+smoothing: 0
+alpha: 1.0
+beta: 1.0
+T: 3.0

@@ -1,0 +1,4 @@
+torch
+torchvision
+timm==0.6.5
+torchsort==0.1.9

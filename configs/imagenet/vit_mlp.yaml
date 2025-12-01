@@ -1,0 +1,21 @@
+epochs: 300
+batch_size: 128
+lr: 5e-4 # todo 0.001
+min_lr: 1e-6 # todo 1e-5
+opt: adamw
+weight_decay: 0.05
+sched: cosine
+warmup_epochs: 20 # todo 5
+warmup_lr: 5e-7 # todo 1e-6
+clip_grad: 5.0  # todo None
+drop: 0
+drop_path: 0
+smoothing: 0.1
+color_jitter: 0.4 # todo 0.3
+reprob: 0.25
+aa: rand-m9-mstd0.5-inc1
+mixup: 0.8
+cutmix: 1.0
+model_ema: true
+model_ema_decay:
+  - 0.99996
