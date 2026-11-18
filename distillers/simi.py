@@ -98,11 +98,16 @@ class SimiKD(BaseDistiller):
         teacher_feat_last = teacher_feat_last.flatten(1)  # [B, L]
         t_importance = F.softmax(teacher_feat_last, dim=-1)  # [B, L]
         t_ranks = torchsort.soft_rank(t_importance, regularization_strength=self.args.regu)
-        # t_ranks = torch.argsort(torch.argsort(t_importance, dim=1), dim=1).float()
-        cls_attn = student_attn[:, :, 0, extra_token:]  # [B, num_heads, L]
-        cls_attn = cls_attn.mean(dim=1)  # [B, L]
-        s_ranks = torchsort.soft_rank(cls_attn, regularization_strength=self.args.regu)
-        # s_ranks = torch.argsort(torch.argsort(cls_attn, dim=1), dim=1).float()
+        #cls_attn = student_attn[:, :, 0, extra_token:]  # [B, num_heads, L]
+        #cls_attn = cls_attn.mean(dim=1)  # [B, L]
+        if extra_token > 0:
+            # 有 CLS token：取 CLS 对空间 token 的注意力
+            s_importance = student_attn[:, :, 0, extra_token:].mean(dim=1)
+        else:
+            # 无 CLS token（如 PVTv2）：计算各空间位置被关注的平均程度
+            # [B, num_heads, N_query, N_key] -> [B, N_key]
+            s_importance = student_attn.mean(dim=(1, 2))
+        s_ranks = torchsort.soft_rank(s_importance, regularization_strength=self.args.regu)
         rank_diff = (t_ranks - s_ranks) ** 2
         # Spearman损失
         n = t_importance.size(1)  # L
