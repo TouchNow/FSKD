@@ -101,10 +101,8 @@ class SimiKD(BaseDistiller):
         #cls_attn = student_attn[:, :, 0, extra_token:]  # [B, num_heads, L]
         #cls_attn = cls_attn.mean(dim=1)  # [B, L]
         if extra_token > 0:
-            # 有 CLS token：取 CLS 对空间 token 的注意力
             s_importance = student_attn[:, :, 0, extra_token:].mean(dim=1)
         else:
-            # 无 CLS token（如 PVTv2）：计算各空间位置被关注的平均程度
             # [B, num_heads, N_query, N_key] -> [B, N_key]
             s_importance = student_attn.mean(dim=(1, 2))
         s_ranks = torchsort.soft_rank(s_importance, regularization_strength=self.args.regu)
